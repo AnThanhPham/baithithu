@@ -2,8 +2,8 @@
 function checkNumber(number){
     return !isNaN(Number.parseFloat(number))
 }
-let btnSubmit = document.querySelector('#submit')
-btnSubmit.onclick = function(e){
+let form = document.querySelector('form')
+form.onsubmit= function(e){
     e.preventDefault();
     let email = document.querySelector('#email').value
     let regexEmail = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/
